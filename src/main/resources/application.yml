@@ -13,26 +13,18 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: product
-          uri: http://localhost:8085
-          predicates:
-            - Path=/product/**,,/products/**,/goods/**
-        - id: order
+        - id: reservation
           uri: http://localhost:8081
           predicates:
-            - Path=/orders/**
-        - id: delivery
+            - Path=/reservations/**
+        - id: work
           uri: http://localhost:8082
           predicates:
-            - Path=/deliveries/**
-        - id: servicecenter
-          uri: http://localhost:8084
+            - Path=/nails/**
+        - id: view
+          uri: http://localhost:8083
           predicates:
-            - Path=/surveys/**
-        - id: mypage
-          uri: http://localhost:8086
-          predicates:
-            - Path=/users/**,/mypage/**
+            - Path=/allStats/**
         - id: oauth
           uri: http://localhost:8090
           predicates:
@@ -60,26 +52,18 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: product
-          uri: http://products:8080
+        - id: reservation
+          uri: http://reservation:8080
           predicates:
-            - Path=/product/**,/products/**,/goods/**
-        - id: order
-          uri: http://orders:8080
+            - Path=/reservations/**
+        - id: work
+          uri: http://work:8080
           predicates:
-            - Path=/orders/**
-        - id: delivery
-          uri: http://delivery:8080
+            - Path=/nails/**
+        - id: view
+          uri: http://view:8080
           predicates:
-            - Path=/deliveries/**
-        - id: servicecenter
-          uri: http://servicecenter:8080
-          predicates:
-            - Path=/surveys/**
-        - id: mypage
-          uri: http://mypage:8080
-          predicates:
-            - Path=/users/**,/mypage/**
+            - Path=/allStats/**
         - id: oauth
           uri: http://oauth:8080
           predicates:
