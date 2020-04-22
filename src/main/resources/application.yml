@@ -79,5 +79,6 @@ spring:
               - "*"
             allowCredentials: true
 
+
 server:
   port: 8080

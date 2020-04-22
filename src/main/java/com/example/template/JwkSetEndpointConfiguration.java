@@ -28,4 +28,5 @@ public class JwkSetEndpointConfiguration {
         RSAKey key = new RSAKey.Builder(publicKey).build();
         return new JWKSet(key).toJSONObject();
     }
+
 }

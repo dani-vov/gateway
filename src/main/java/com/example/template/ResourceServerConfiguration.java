@@ -30,6 +30,7 @@ public class ResourceServerConfiguration {
                 .jwt()
                 ;
 
+
         return http.build();
     }
 
